@@ -1,0 +1,64 @@
+# Common Prompt Templates for Agentic AI Patterns
+#
+# This file contains shared prompt templates used across multiple patterns.
+#
+# Design rationale:
+# - Jinja2 templating: Use {{ variable }} for variable substitution
+# - Reusability: Common prompts shared across patterns
+# - Versioning: Easy to track prompt changes in git
+# - Experimentation: Modify prompts without changing code
+
+prompts:
+  # Prompt Chaining Pattern: Extraction
+  extract_specs:
+    template: |
+      Extract the technical specifications from the following text:
+
+      {{ text_input }}
+    description: 'Extract technical specifications from input text (Prompt Chaining pattern)'
+
+  # Prompt Chaining Pattern: Transformation
+  transform_to_json:
+    template: |
+      Transform the following specifications into a JSON object with '{{ keys | join("', '") }}' as keys:
+
+      {{ specifications }}
+    description: 'Transform specifications to JSON format (Prompt Chaining pattern)'
+
+  # Parallelization Pattern: Summarization
+  summarize_topic:
+    template: |
+      Summarize the following topic concisely:
+
+      {{ topic }}
+    description: 'Concise topic summarization (Parallelization pattern)'
+
+  # Parallelization Pattern: Question Generation
+  generate_questions:
+    template: |
+      Generate three interesting questions about the following topic:
+
+      {{ topic }}
+    description: 'Generate questions about a topic (Parallelization pattern)'
+
+  # Parallelization Pattern: Key Terms Extraction
+  extract_key_terms:
+    template: |
+      Identify 5-10 key terms from the following topic, separated by commas:
+
+      {{ topic }}
+    description: 'Extract key terms from topic (Parallelization pattern)'
+
+  # Parallelization Pattern: Synthesis
+  synthesize_parallel_results:
+    template: |
+      Based on the following information:
+
+      Summary: {{ summary }}
+      Related Questions: {{ questions }}
+      Key Terms: {{ key_terms }}
+
+      Synthesize a comprehensive answer.
+
+      Original topic: {{ topic }}
+    description: 'Synthesize results from parallel chains (Parallelization pattern)'

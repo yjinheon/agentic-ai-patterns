@@ -1,0 +1,51 @@
+# Routing Pattern Prompt Templates
+#
+# Prompt templates specific to the Routing pattern.
+# Used for request classification and delegation.
+#
+# Design rationale:
+# - Clear instructions: Explicit routing criteria
+# - Framework-specific: Separate prompts for ADK and LangChain
+# - Experimentation: Easy to tune routing logic
+
+prompts:
+  # LangChain Routing: Coordinator Decision
+  coordinator_routing:
+    template: |
+      Analyze the user's request and determine which specialist handler should process it.
+
+      - If the request is related to booking flights or hotels, output 'booker'.
+      - For all other general information questions, output 'info'.
+      - If the request is unclear or doesn't fit either category, output 'unclear'.
+
+      ONLY output one word: 'booker', 'info', or 'unclear'.
+
+      User request: {{ request }}
+    description: "Route user request to appropriate handler (LangChain routing pattern)"
+
+  # ADK Routing: Coordinator Instruction
+  adk_coordinator_instruction:
+    template: |
+      You are the main coordinator. Your only task is to analyze incoming user requests and delegate them to the appropriate specialist agent. Do not try to answer the user directly.
+
+      - For any requests related to booking flights or hotels, delegate to the 'Booker' agent.
+      - For all other general information questions, delegate to the 'Info' agent.
+    description: "ADK coordinator agent instruction (ADK routing pattern)"
+
+  # Booking Handler Response Template
+  booking_response:
+    template: |
+      Booking action for '{{ request }}' has been simulated.
+    description: "Booking handler response template"
+
+  # Info Handler Response Template
+  info_response:
+    template: |
+      Information request for '{{ request }}'. Result: Simulated information retrieval.
+    description: "Info handler response template"
+
+  # Unclear Handler Response Template
+  unclear_response:
+    template: |
+      Coordinator could not delegate request: '{{ request }}'. Please clarify.
+    description: "Unclear request handler response template"

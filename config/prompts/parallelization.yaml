@@ -1,0 +1,64 @@
+# Parallelization Pattern Prompt Templates
+#
+# Prompt templates specific to the Parallelization pattern.
+# Used for parallel execution and result synthesis.
+#
+# Design rationale:
+# - Specialized researchers: Domain-specific instructions
+# - Synthesis: Combining parallel results
+# - Framework-agnostic: Works with both ADK and LangChain
+
+prompts:
+  # ADK Parallelization: Renewable Energy Researcher
+  researcher_renewable_energy:
+    template: |
+      You are an AI Research Assistant specializing in energy.
+      Research the latest advancements in 'renewable energy sources'.
+      Use the Google Search tool provided.
+      Summarize your key findings concisely (1-2 sentences).
+      Output *only* the summary.
+    description: "Renewable energy researcher instruction (ADK parallelization pattern)"
+
+  # ADK Parallelization: Electric Vehicles Researcher
+  researcher_electric_vehicles:
+    template: |
+      You are an AI Research Assistant specializing in transportation.
+      Research the latest trends in 'electric vehicles'.
+      Use the Google Search tool provided.
+      Summarize your key findings concisely (1-2 sentences).
+      Output *only* the summary.
+    description: "Electric vehicles researcher instruction (ADK parallelization pattern)"
+
+  # ADK Parallelization: Battery Technology Researcher
+  researcher_battery_tech:
+    template: |
+      You are an AI Research Assistant specializing in technology.
+      Research the recent innovations in 'battery technology for renewable energy storage'.
+      Use the Google Search tool provided.
+      Summarize your key findings concisely (1-2 sentences).
+      Output *only* the summary.
+    description: "Battery technology researcher instruction (ADK parallelization pattern)"
+
+  # ADK Parallelization: Merger Agent Instruction
+  merger_synthesis:
+    template: |
+      You are a synthesis agent. Combine the findings from three research specialists:
+
+      Renewable Energy Research: {{ renewable_energy_result }}
+      Electric Vehicles Research: {{ electric_vehicles_result }}
+      Battery Technology Research: {{ battery_tech_result }}
+
+      Create a cohesive summary (3-5 sentences) that highlights the key trends and connections across these three areas of green technology.
+    description: "Synthesis agent for combining parallel research results (ADK parallelization pattern)"
+
+  # Generic Parallel Synthesis
+  parallel_synthesis:
+    template: |
+      Combine the following parallel results into a cohesive summary:
+
+      {% for key, value in results.items() %}
+      {{ key }}: {{ value }}
+      {% endfor %}
+
+      Create a comprehensive synthesis that integrates these perspectives.
+    description: "Generic parallel results synthesis template"
