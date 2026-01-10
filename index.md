@@ -1,18 +1,3 @@
----
-
-**_Concept_**
-
-- **TBD** :
-- **TBD** :
-- **TBD** :
-
----
-
-
---
-
-
-
 ## Chapter Overview
 
 ### Pattern Overview
@@ -58,88 +43,88 @@
 - 외부 API, 데이터베이스, 서비스와의 상호작용
 - Function Calling 구현
 
-  1.6 Chapter 6: Planning
+  2.6 Chapter 6: Planning
 
 - 목표 달성을 위한 단계별 계획 수립
 - Plan-and-Execute 패턴
 
-  1.7 Chapter 7: Multi-Agent Collaboration
+  2.7 Chapter 7: Multi-Agent Collaboration
 
 - 다중 에이전트 시스템 설계
 - 역할 분담과 협업 메커니즘
 
-## Part 2: 상태 관리 및 학습 (State & Learning)
+## Part 3: 상태 관리 및 학습 (State & Learning)
 
-2.1 Chapter 8: Memory Management
+3.1 Chapter 8: Memory Management
 
 - 단기/장기 메모리 구현
 - 대화 컨텍스트 유지
 
-  2.2 Chapter 9: Learning and Adaptation
+  3.2 Chapter 9: Learning and Adaptation
 
 - 경험 기반 학습
 - 성능 개선 메커니즘
 
-  2.3 Chapter 10: Model Context Protocol (MCP)
+  3.3 Chapter 10: Model Context Protocol (MCP)
 
 - 컨텍스트 전달 표준화
 - 모델 간 정보 공유
 
-  2.4 Chapter 11: Goal Setting and Monitoring
+  3.4 Chapter 11: Goal Setting and Monitoring
 
 - 목표 설정과 진행 상황 모니터링
 - 성과 측정
 
-## Part 3: 신뢰성 및 안전성 (Reliability & Safety)
+## Part 4: 신뢰성 및 안전성 (Reliability & Safety)
 
-3.1 Chapter 12: Exception Handling and Recovery
+4.1 Chapter 12: Exception Handling and Recovery
 
 - 오류 처리와 복구 전략
 - Fallback 메커니즘
 
-  3.2 Chapter 13: Human-in-the-Loop
+  4.2 Chapter 13: Human-in-the-Loop
 
 - 인간 개입 포인트 설계
 - 승인 워크플로우
 
-  3.3 Chapter 14: Knowledge Retrieval (RAG)
+  4.3 Chapter 14: Knowledge Retrieval (RAG)
 
 - Retrieval-Augmented Generation
 - 벡터 데이터베이스 활용
 
-## Part 4: 고급 패턴 (Advanced Patterns)
+## Part 5: 고급 패턴 (Advanced Patterns)
 
-4.1 Chapter 15: Inter-Agent Communication (A2A)
+5.1 Chapter 15: Inter-Agent Communication (A2A)
 
 - 에이전트 간 통신 프로토콜
 - 메시지 교환 패턴
 
-  4.2 Chapter 16: Resource-Aware Optimization
+  5.2 Chapter 16: Resource-Aware Optimization
 
 - 리소스 효율적 설계
 - 비용/성능 최적화
 
-  4.3 Chapter 17: Reasoning Techniques
+  5.3 Chapter 17: Reasoning Techniques
 
 - Chain-of-Thought, Tree-of-Thought
 - 고급 추론 전략
 
-  4.4 Chapter 18: Guardrails/Safety Patterns
+  5.4 Chapter 18: Guardrails/Safety Patterns
 
 - 안전장치 구현
 - 출력 검증과 필터링
 
-  4.5 Chapter 19: Evaluation and Monitoring
+  5.5 Chapter 19: Evaluation and Monitoring
 
 - 에이전트 성능 평가
 - 모니터링 시스템 구축
 
-  4.6 Chapter 20: Prioritization
+  5.6 Chapter 20: Prioritization
 
 - 작업 우선순위 결정
 - 리소스 할당
 
-  4.7 Chapter 21: Exploration and Discovery
+  5.7 Chapter 21: Exploration and Discovery
 
 - 탐색적 문제 해결
 - 새로운 솔루션 발견
